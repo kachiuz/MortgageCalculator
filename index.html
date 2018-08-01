@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="style.css" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="javascript.js"></script>
+		<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+		
+		<title>Mortgage Calculator</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Mortgage Calculator</h1>
+			</div>
+		</div>
+		
+		
+		<div class="inputContainer">
+			<div class="backgroundText">Mortgage Amount</div>
+			<input type="number" maxlength="9" class="inputField" placeholder="Enter Value" id="mortgageAmount" value="100000"></input>
+		</div>
+		<div class="inputContainer">
+			<div class="backgroundText">Repayment Period</div>
+			<input type="number" maxlength="9" class="inputField" placeholder="Enter Value" id="repaymentPeriod" value="25"></input>
+		</div>
+		<div class="inputContainer">
+			<div class="backgroundText">Interest Rate</div>
+			<input type="number" maxlength="9" class="inputField" placeholder="Enter Value" id="interestRate" value="3.03"></input>
+		</div>
+		
+		
+		<div class="buttonContainer container">
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<div id="error"></div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<input type="submit" value="Calculate" class="button" id="calculateButton"></input>
+				</div>
+			</div>
+		</div>
+		
+		<div class="resultContainer container">
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+					<div class="result">Monthly Payments</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+					<div class="result result2" id="monthlyPayment">0</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+					<div class="result">Interest Only</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+					<div class="result result2"  id="interestOnly">0</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="resultContainer container">
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+					<div class="result">Cost Of Mortgage</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+					<div class="result result2" id="totalMortgageValue">0</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+					<div class="result">Total Interest</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+					<div class="result result2" id="totalInterest">0</div>
+				</div>
+			</div>
+		</div>	
+
+		
+		<!-- Trigger the modal with a button -->
+		<div class="resultContainer container">
+			<div class="row">
+				<button type="button" id="button1" class="btn btnNew btn-info btn-lg col-xs-12 col-sm-6 col-md-6 col-lg-6" data-toggle="modal" data-target="#modal1">Mortgage Charts</button>
+				<button type="button" id="button2" class="btn btnNew btn-info btn-lg col-xs-12 col-sm-6 col-md-6 col-lg-6" data-toggle="modal" data-target="#modal2">Mortgage Schedule</button>
+			</div>
+		</div>
+		<!-- Modal 1 -->
+		<div id="modal1" class="modal fade" role="dialog">
+			<div class="modal-dialog width350">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Mortgage Charts</h4>
+					</div>
+					<div class="modal-body">
+						<div class="resultContainerChart container">
+							<div class="row">
+								<div id="chartContainer" class="chartContainer col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+								<div id="chartContainer2" class="chartContainer col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+							</div>
+							<div class="row">
+								<div id="chartContainer3" class="chartContainer col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+								<div id="chartContainer4" class="chartContainer col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+							</div>
+						</div>								
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Modal 2 -->
+		<div id="modal2" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Mortgage Schedule</h4>
+					</div>
+					<div class="modal-body">
+						<div class="container width100 text-center background" >
+							<div class="row">
+								<div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">Payment Year</div>
+								<div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">Principal Payment</div>
+								<div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">Interest Payment</div>
+								<div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">Balance</div>
+							</div>
+						</div>
+						<div id="mortgageSchedule" class="container width100">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="previuosContainer">
+			<div class="resultBoxTitle">Previuos Results
+				<input type="submit" value="Clear" class="buttonClear" id="buttonClear"></input>
+				
+			</div>
+			<div class="resultBox" id="resultBox"></div>
+
+		</div>
+		<input type="hidden" value="0" id="counter"></input>
+	</body>
+</html>

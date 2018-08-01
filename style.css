@@ -1,0 +1,265 @@
+input, select 
+{
+    border-radius: 0;	
+}
+.jumbotron
+{
+	text-align: center;
+	background: #33cc33;
+	color: white;
+}
+.inputField
+{
+	width: 50%;
+	height:30px;
+	position: absolute;
+	right: 0px;
+	border: 1px solid blue;
+	font-weight: bold;
+	font-size: 20px;
+	text-indent: 5%;
+}
+.inputContainer
+{
+	margin-left: 10%;
+	margin-bottom: 30px;
+	position: relative;
+	display: inline-block;
+	width: 80%;
+}
+.backgroundText
+{
+	background: blue;
+	color: white;
+	width: 50%;
+	position: absolute;
+	left: 0px;
+	text-align: center;
+	height:30px;
+	padding: 2px;
+	font-size: 18px;
+}
+.buttonContainer
+{
+	margin-left: 10%;
+	position: relative;
+	display: inline-block;
+	height: 45px;
+	width: 80%;
+	margin-bottom: 10px;
+}
+.button
+{
+	background: #33cc33;
+	color: white;
+	height: 45px;
+	position: absolute;
+	right: 0px;
+	font-size: 30px;
+	
+}
+#error
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: red;
+	font-size: 22px;
+	font-weight: bold;
+}
+.buttonClear
+{
+	height: auto;
+	position: absolute;
+	right: 3px;
+	top: 3px;
+	font-size: 20px;
+	background: #33cc33;
+}
+.previuosContainer
+{
+	margin-top: 10px;
+	margin-left: 10%;
+	position: relative;
+	display: inline-block;
+	width: 80%;
+}
+.resultContainer, .resultContainerChart
+{
+	margin-left: 10%;
+	position: relative;
+	display: inline-block;
+	width: 80%;
+	margin-bottom: 0px;
+}
+.resultContainerChart
+{
+	width: 95%;
+	margin-left: 0%;
+}
+
+.result
+{
+	margin: 0px;
+	display: inline-block;
+	background: blue;
+	color: white;
+	width: 100%;
+	text-align: center;
+	height:30px;
+	padding: 2px;
+	font-size: 18px;
+}
+.result2
+{
+	background: white;
+	box-shadow: 0 0 1px blue inset;
+	color: black;
+	font-weight: bold;
+}
+
+
+.previuosResult1
+{
+	color: white;
+	text-align: center;
+	background: #0099cc;
+	font-size: 18px;
+}
+.previuosResult1B
+{
+	color: black;
+	box-shadow: 0 0 1px blue inset;
+	text-align: center;
+	background: #e6ffff;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+.previuosResult2
+{
+	color: white;
+	text-align: center;
+	background: blue;
+	font-size: 18px;
+}
+.previuosResult2B
+{
+	color: black;
+	box-shadow: 0 0 1px blue inset;
+	text-align: center;
+	background: #d1b3ff;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+.resultBoxTitle
+{
+	background: #33cc33;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+	height: auto;
+	width: 100%;
+	position:relative;
+}
+.resultBox
+{
+	height: auto;
+	width: 100%;
+	font-size: 20px;	
+}
+.width100
+{
+	width: 100%;
+}
+.btnNew
+{
+	border-radius: 0px;
+	height: 40px;
+	font-size: 20px;
+	box-shadow: 0 0 1px blue inset;
+}
+hr
+{
+	margin-top: 32px;
+	margin-bottom: 2px;
+	border: 2px solid #33cc33;
+}
+.chartContainer
+{
+	width: 50%;
+	height: 400px;
+	margin-top: 20px;
+}
+.width350
+{
+	width: 95%;
+	margin: auto;
+}
+
+.modal-title
+{
+	text-align: center;
+	font-weight: bold;
+	font-size: 30px;
+}
+.background
+{
+	background: #d7d7c1;
+}
+.text-center
+{
+	text-align: center;
+	border-bottom: 1px solid grey;
+}
+.backgroundOdd
+{
+	background: #f5f5ef;
+}
+.backgroundEven
+{
+	background: #ebebe0;
+}
+
+
+/*small screen error message*/
+@media only screen and (max-width: 800px) {
+	input, select 
+	{
+		border-radius: 0;
+		margin-left: -2px;
+	}
+    #error{
+	font-size: 15px;
+	}
+	
+	.inputContainer, .resultContainer, .previuosContainer, .buttonContainer
+	{
+		margin-left: 0%;
+		width: 100%;
+	}
+	.resultBoxTitle
+	{
+		text-align: left;
+		text-indent: 15px;
+	}
+	.chartContainer
+	{
+		width: 90%;
+	}
+}
+
+/*bootstrap*/
+.col-xs-6, .col-sm-6, .col-md-3, .col-lg-3
+{
+	margin:0px;
+	margin-top: 3px;
+	padding: 0px;
+}
+.row
+{
+	padding: 0px;
+}
