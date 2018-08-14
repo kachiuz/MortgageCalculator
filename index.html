@@ -11,7 +11,6 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="javascript.js"></script>
 		<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
-		
 		<title>Mortgage Calculator</title>
 	</head>
 	<body>
@@ -20,22 +19,18 @@
 				<h1>Mortgage Calculator</h1>
 			</div>
 		</div>
-		
-		
 		<div class="inputContainer">
 			<div class="backgroundText">Mortgage Amount</div>
-			<input type="number" maxlength="9" class="inputField" placeholder="Enter Value" id="mortgageAmount" value="100000"></input>
+			<input type="number" maxlength="9" class="inputField" placeholder="Enter Value" id="mortgageAmount"></input>
 		</div>
 		<div class="inputContainer">
 			<div class="backgroundText">Repayment Period</div>
-			<input type="number" maxlength="9" class="inputField" placeholder="Enter Value" id="repaymentPeriod" value="25"></input>
+			<input type="number" maxlength="9" class="inputField" placeholder="Enter Value" id="repaymentPeriod"></input>
 		</div>
 		<div class="inputContainer">
 			<div class="backgroundText">Interest Rate</div>
-			<input type="number" maxlength="9" class="inputField" placeholder="Enter Value" id="interestRate" value="3.03"></input>
+			<input type="number" maxlength="9" class="inputField" placeholder="Enter Value" id="interestRate"></input>
 		</div>
-		
-		
 		<div class="buttonContainer container">
 			<div class="row">
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -46,7 +41,6 @@
 				</div>
 			</div>
 		</div>
-		
 		<div class="resultContainer container">
 			<div class="row">
 				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
@@ -63,7 +57,6 @@
 				</div>
 			</div>
 		</div>
-		
 		<div class="resultContainer container">
 			<div class="row">
 				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
@@ -80,8 +73,6 @@
 				</div>
 			</div>
 		</div>	
-
-		
 		<!-- Trigger the modal with a button -->
 		<div class="resultContainer container">
 			<div class="row">
@@ -92,7 +83,6 @@
 		<!-- Modal 1 -->
 		<div id="modal1" class="modal fade" role="dialog">
 			<div class="modal-dialog width350">
-
 				<!-- Modal content-->
 				<div class="modal-content">
 					<div class="modal-header">
@@ -117,11 +107,9 @@
 				</div>
 			</div>
 		</div>
-		
 		<!-- Modal 2 -->
 		<div id="modal2" class="modal fade" role="dialog">
 			<div class="modal-dialog">
-
 				<!-- Modal content-->
 				<div class="modal-content">
 					<div class="modal-header">
@@ -149,10 +137,8 @@
 		<div class="previuosContainer">
 			<div class="resultBoxTitle">Previuos Results
 				<input type="submit" value="Clear" class="buttonClear" id="buttonClear"></input>
-				
 			</div>
 			<div class="resultBox" id="resultBox"></div>
-
 		</div>
 		<input type="hidden" value="0" id="counter"></input>
 	</body>
