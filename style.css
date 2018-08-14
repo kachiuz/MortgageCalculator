@@ -117,8 +117,6 @@ input, select
 	color: black;
 	font-weight: bold;
 }
-
-
 .previuosResult1
 {
 	color: white;
@@ -135,8 +133,6 @@ input, select
 	font-size: 18px;
 	font-weight: bold;
 }
-
-
 .previuosResult2
 {
 	color: white;
@@ -153,8 +149,6 @@ input, select
 	font-size: 18px;
 	font-weight: bold;
 }
-
-
 .resultBoxTitle
 {
 	background: #33cc33;
@@ -199,7 +193,6 @@ hr
 	width: 95%;
 	margin: auto;
 }
-
 .modal-title
 {
 	text-align: center;
@@ -223,8 +216,6 @@ hr
 {
 	background: #ebebe0;
 }
-
-
 /*small screen error message*/
 @media only screen and (max-width: 800px) {
 	input, select 
@@ -251,7 +242,6 @@ hr
 		width: 90%;
 	}
 }
-
 /*bootstrap*/
 .col-xs-6, .col-sm-6, .col-md-3, .col-lg-3
 {

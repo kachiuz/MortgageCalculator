@@ -44,7 +44,7 @@ $(document).ready(function(){
 			//get counter value;
 			var counter = $('#counter').val();
 			
-			//chnage background color for every second result values
+			//change background color for every second result values
 			if (counter % 2 === 0)
 			{
 				
@@ -81,34 +81,10 @@ $(document).ready(function(){
 			$( "#totalMortgageValue" ).text(totalMortgageValue);
 			$( "#totalInterest" ).text(totalInterest);
 				
-			
-			/*for (i=1;i<=repaymentPeriod;i++)
-			{
-				var currentPeriod = i*12;
-				var balance = mortgageAmount*((Math.pow(1+monthlyInterestRate, numberOfPeriods))-Math.pow(1+monthlyInterestRate, currentPeriod));
-				balance = balance/((Math.pow(1+monthlyInterestRate, numberOfPeriods))-1);
-				balance = balance.toFixed(2);
-				
-				$("#panel").append(i+" - ");
-				$("#panel").append(balance);
-				$("#panel").append("<br>");
-				//testArray.push({x: 0+i, y: balance-1000*i});
-
-			}*/
-			
-			
-			
 			//----------------------------Caculated previuos results------------------------------------//
-			
-			
-						
-							
-			
-			//////////////////////////////////////////////////////////////////////////////////////
-			
+									
 			var $divCONTAINER = $("<div>", {id: "divCONTAINER"+counter, "class": "container width100"});
-			$("#resultBox").prepend($divCONTAINER);
-			
+			$("#resultBox").prepend($divCONTAINER);	
 			
 			//fith row div for previuos results
 			var $divROW5 = $("<div>", {id: "divROW5"+counter, "class": "row"});
@@ -200,15 +176,13 @@ $(document).ready(function(){
 				$("#divROW1"+counter ).prepend($divMA);
 				$("#divMA"+counter).prepend("Mortgage Amount:");
 			
-			
 			//increase counter value
 			counter++;
 			var counter = $('#counter').val(counter);
 		}
 		else
-		{ alert("lolol")}
+		{ alert("Error!")}
 	});
-	
 	
 	//clar results table
 	$( "#buttonClear" ).click(function() {
@@ -217,8 +191,6 @@ $(document).ready(function(){
 		//reset counter value
 		var counter = $('#counter').val(0);
 	});
-	
-	
 	
 	$("#button1").click( function () {
 		$("#modal1").css("display", "block");
@@ -248,13 +220,9 @@ $(document).ready(function(){
 				var balance = mortgageAmount*((Math.pow(1+monthlyInterestRate, numberOfPeriods))-Math.pow(1+monthlyInterestRate, currentPeriod));
 				balance = balance/((Math.pow(1+monthlyInterestRate, numberOfPeriods))-1);
 				balance = Number(balance.toFixed(0));
-				
 				testArray.push({x: i,y: balance});
-				
-
 			}
 	//Better to construct options first and then pass it as a parameter
-	
 	
 	var chart = new CanvasJS.Chart("chartContainer", {
 		
@@ -270,19 +238,11 @@ $(document).ready(function(){
 	}]
 });
 
-	
-	
-
-	
-	//////////////////
-
-//var monthlyPayment = 476;
 var payPerYear = monthlyPayment*12;
 var testArray3 = [];
 var testArray2 = [];
 for (i=1;i<=repaymentPeriod;i++)
-	{
-			
+	{	
 		var intersetPaidPerYear = 0;  //0 at every beggining of the year
 		var principalPaidPerYear = 0;
 		for (x=0;x<12;x++)
@@ -305,9 +265,6 @@ for (i=1;i<=repaymentPeriod;i++)
 		testArray3.push({x: i,y: principalPaidPerYear});
 		
 	}
-
-
-
 
 	var options =  {
 		animationEnabled: true,
@@ -363,7 +320,6 @@ for (i=1;i<=repaymentPeriod;i++)
 	}]
 });
 
-	
 	var testArray4 = [];
 	var mortgageAmount = $('#mortgageAmount').val(); //need to get this value again
 	interestRate = 1;
@@ -392,20 +348,15 @@ for (i=1;i<=repaymentPeriod;i++)
 		}]
 	});
 
-	
-	
 	chart.render();
 	$("#chartContainer2").CanvasJSChart(options);
 	chart3.render();
 	chart4.render();
 	});
 	
-	
 	$("#button2").click( function () {
 		$("#modal2").css("display", "block");
 		$("#mortgageSchedule").text("");
-		
-		
 		
 		var mortgageAmount = $('#mortgageAmount').val();
 		var repaymentPeriod = $('#repaymentPeriod').val();
@@ -453,12 +404,8 @@ for (i=1;i<=repaymentPeriod;i++)
 			
 			principalPaidPerYear = principalPaidPerYear.toFixed(2);
 	
-	
-	
 			var $divRow = $("<div>", {id: "divRow"+i, "class": backgroundColor});
 			$("#mortgageSchedule").append($divRow);
-			
-			//
 			
 			//add year to row
 			var $divYear = $("<div>", {id: "divYear"+i, "class": "col-xs-3 col-sm-3 col-md-3 col-lg-3"});
@@ -479,11 +426,7 @@ for (i=1;i<=repaymentPeriod;i++)
 			$("#divRow"+i).append($divBalance);
 			$("#divBalance"+i).append(balance);
 		}
-		
 	});
-	
-
-	
 });
 
 
